@@ -6,4 +6,5 @@ A ML model which predicts the score of a T20 match according to the current scor
 https://www.kaggle.com/veeralakrishna/cricsheet-a-retrosheet-for-cricket?select=t20s
 
 # see working model
+https://t20-match-score-predictor.herokuapp.com/
 

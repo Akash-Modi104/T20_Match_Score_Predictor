@@ -1,0 +1,16 @@
+.{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.bg-dark{
+	background-color: #EEE8AA;
+}
+
+
+.mt-50{
+	margin-top: 100px;
+}
+#canvas{
+    border: 2px solid black;
+}

@@ -1,4 +1,12 @@
+"""
+    email: developer.akash104@gmail.com
+    author: akash modi
+"""
+
+
+
 from flask import Flask,render_template,jsonify,request
+from flask_cors import CORS,cross_origin
 import pandas as pd
 import numpy as np
 import joblib
@@ -9,6 +17,7 @@ from xgboost import XGBRegressor
 
 
 app=Flask(__name__)
+cors=CORS(app)
 scroe_predictor=pd.read_csv("artificats/file/cleaned.csv")
 model1=joblib.load('model','w+')
 
@@ -22,6 +31,7 @@ def index():
     html=render_template("index.html",batting_teams=batting_team,bowling_teams=bowling_team,cities=city)
     return(html)
 @app.route("/predict",methods=["POST"])
+@cross_origin()
 def predict():
     batting_team=request.form.get("batting")
     bowling_team=request.form.get("bowling")
